@@ -27,19 +27,24 @@ public class AccountHolder extends Thread {
 	}
 
 	private synchronized void withdrawAmount(Integer amount, String accountHolder, Account account) {
+		
 		// check if there is enough amount in account to withdraw the money requested.
 		if (amount <= account.getBalance()) {
 
 			try {
 				Thread.sleep(4000);
 				account.withdraw(amount);
+				
+				// update the balance after withdrawal
+				System.out.println("Amount " + amount + " withdrwan successfully by " + accountHolder
+						+ ". Current balance is :" + account.getBalance());
+				
+				// account.getBalance() is not showing properly... its not well updated.
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			// update the balance after withdrawal
-			System.out.println("Amount " + amount + " withdrwan successfully by " + accountHolder
-					+ ". Current balance is :" + account.getBalance());
+			
 		} else {
 			System.out.println(
 					"Requested money " + amount + " CAN NOT be withdrawn, by " + accountHolder + "as there is only "

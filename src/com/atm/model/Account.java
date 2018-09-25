@@ -21,7 +21,7 @@ public class Account {
 		 * trying to handle this balance update, so that any change by other thread is immediately
 		 * visible to other thread... 
 		 * 
-		 * but it seems not working. how to do ???
+		 * but it seems not working. how to do ??? 
 		 * 
 		 */
 		synchronized(this) {
