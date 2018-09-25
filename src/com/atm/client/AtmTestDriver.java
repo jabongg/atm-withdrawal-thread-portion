@@ -19,13 +19,30 @@ public class AtmTestDriver {
 	/*
 	 * 	random OUTPUT snapshot here: (without withdraw() method to be synchronized.)
 	 * 
-	 *  Acoount balance = 6000;
-	 *  
-	 * 	Amount 3000 withdrwan successfully by Marylin. Current balance is :3000
+	 *  Initial balance in account is :6000
+		Initial balance in account is :6000
+	  	Amount 3000 withdrwan successfully by Marylin. Current balance is :3000
 		Amount 2000 withdrwan successfully by Mike. Current balance is :1000
 		Requested money 2000 CAN NOT be withdrawn, as there is only 1000 remained. Current balance is :1000
 		Requested money 2000 CAN NOT be withdrawn, as there is only 1000 remained. Current balance is :1000
 		Amount 3000 withdrwan successfully by Marylin. Current balance is :-2000
 		Requested money 3000 CAN NOT be withdrawn, as there is only -2000 remained. Current balance is :-2000
+	 */
+	
+	
+	/*
+	 * With synchronized keyword : 
+	 * 
+	 * Output:
+	 * (still not working... as expected)
+	 * 
+	 *	Initial balance in account is :6000
+		Initial balance in account is :6000
+		Amount 2000 withdrwan successfully by Mike. Current balance is :1000
+		Amount 3000 withdrwan successfully by Marylin. Current balance is :1000
+		Requested money 2000 CAN NOT be withdrawn, by Mikeas there is only 1000 remained. Current balance is :1000
+		Requested money 2000 CAN NOT be withdrawn, by Mikeas there is only 1000 remained. Current balance is :1000
+		Requested money 3000 CAN NOT be withdrawn, by Marylinas there is only 1000 remained. Current balance is :1000
+		Requested money 3000 CAN NOT be withdrawn, by Marylinas there is only 1000 remained. Current balance is :1000 
 	 */
 }
